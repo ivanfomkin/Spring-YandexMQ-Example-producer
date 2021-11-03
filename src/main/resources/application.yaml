@@ -1,0 +1,18 @@
+cloud:
+  aws:
+    sns:
+      enabled: false #Amazon SNS disabling
+    s3:
+      region: ${cloud.yandex.region} #This need for run application
+    sqs:
+      endpoint: https://message-queue.api.cloud.yandex.net/ #endpoint from yandex cloud documentation
+    credentials:
+      access-key: bsd3dIspnfqIsdfsdfsdfSEvsivr #paste your access-key here
+      secret-key: ct1dd3GOTO22ARfdsffsfY-_bCB4QmlR2IREsdsdZ1b #paste your secret-key here
+  yandex:
+    region: ru-central1 #region from yandex.cloud documentation
+server:
+  port: 8082 #use any free port on your computer
+message:
+  queue:
+    outgoing: queueFromCode #queue name, it will create from code
